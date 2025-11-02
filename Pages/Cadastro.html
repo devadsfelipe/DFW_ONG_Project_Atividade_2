@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/style.css">
+    <title>Faça Parte | Guardiões de Xique-Xique</title>
+    <link rel="icon" href="../Assets/Images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="logo-area">
+            <img src="../Assets/Images/logo.png" alt="Logotipo da organização Guardiões de Xique-Xique" width="150"
+                height="150">
+            <h1>Guardiões de Xique-Xique: Transformando Vidas pela Comunidade</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../Index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="../Pages/Projetos.html">Nossos Projetos</a>
+                </li>
+                <li><a href="../Pages/Cadastro.html" class="active">Faça Parte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container-grid">
+            <div class="col-12">
+                <h1>Faça parte e nos ajude a ajudar Xique-Xique</h1>
+
+                <div class="alert alert-error">
+                    ❌ Atenção: Todos os campos com (*) são obrigatórios e exigem formato correto (ex: 000.000.000-00
+                    para CPF).
+                </div>
+
+                <h2>Preencha seus Dados</h2>
+
+                <form action="/processar-cadastro" method="POST">
+
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+
+                        <div class="form-group">
+                            <label for="nome">Nome Completo (*)</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Ex: Maria da Silva">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail (*)</label>
+                            <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">CPF (*)</label>
+                            <input type="text" id="cpf" name="cpf" required pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+                                title="Formato: 999.999.999-99" placeholder="000.000.000-00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone (*)</label>
+                            <input type="tel" id="telefone" name="telefone" required
+                                pattern="^\(\d{2}\)\s\d{4,5}-\d{4}$" title="Formato: (99) 99999-9999"
+                                placeholder="(00) 00000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dataNasc">Data de Nascimento (*)</label>
+                            <input type="date" id="dataNasc" name="dataNasc" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div class="form-group">
+                            <label for="cep">CEP (*)</label>
+                            <input type="text" id="cep" name="cep" required pattern="^\d{5}-\d{3}$"
+                                title="Formato: 00000-000" placeholder="00000-000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endereco">Endereço (*)</label>
+                            <input type="text" id="endereco" name="endereco" required
+                                placeholder="Rua, Avenida, Número">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade (*)</label>
+                            <input type="text" id="cidade" name="cidade" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">Estado (*)</label>
+                            <select id="estado" name="estado" required>
+                                <option value="" disabled selected>Selecione seu Estado</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="BA">Bahia</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="../Index.html">Voltar para a página inicial</a></p>
+    </footer>
+
+</body>
+
+</html>
